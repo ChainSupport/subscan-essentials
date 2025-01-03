@@ -1,0 +1,6 @@
+
+# MySQL Configuration
+host = "mysql"         # MySQL host (default is 127.0.0.1)
+user = "root"              # MySQL user (default is root)
+pass = "helloload"                  # MySQL user password (default is empty)
+db = "subscan"             # MySQL database name (default is "subscan")

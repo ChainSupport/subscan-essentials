@@ -1,0 +1,4 @@
+
+
+# Redis Configuration
+addr = "redis:6379"   # Redis host and port (default is 127.0.0.1:6379)
