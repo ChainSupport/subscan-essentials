@@ -3,11 +3,12 @@ FROM node:22 as builder
 WORKDIR /app
 COPY package.json /app
 COPY yarn.lock /app
-RUN rm -f yarn.lock && \
-    yarn config set registry https://registry.npmjs.org/ && \
-    yarn install --force
+RUN yarn config set "strict-ssl" false && yarn install
+# rm -f yarn.lock && \
+#     yarn config set registry https://registry.npmjs.org/ && \
+#     yarn install --force
 ADD . /app
-RUN yarn build
+RUN  yarn build
 
 FROM nginx:latest
 COPY --from=builder /app/dist /usr/share/nginx/html
