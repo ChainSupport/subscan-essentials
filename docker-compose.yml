@@ -7,6 +7,7 @@ services:
     environment: &app_base
       MYSQL_HOST: mysql
       MYSQL_PASS: 'helloload'
+      MYSQL_USER: 'root'
       # Name of the database subscan will connect to and use
       # this db must exist
       MYSQL_DB: 'subscan'
