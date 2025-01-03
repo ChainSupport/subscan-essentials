@@ -1,0 +1,114 @@
+{
+  "Weight": "u64",
+  "CompactAssignments": "CompactAssignmentsLatest",
+  "RefCount": "u32",
+  "Box<<T as Config>::Call>": "Call",
+  "DispatchResult": {
+    "type": "enum",
+    "type_mapping": [
+      [
+        "Ok",
+        "Null"
+      ],
+      [
+        "Error",
+        "DispatchError"
+      ]
+    ]
+  },
+  "TransactionRecoveryId": "U64",
+  "TransactionSignature": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "v",
+        "TransactionRecoveryId"
+      ],
+      [
+        "r",
+        "H256"
+      ],
+      [
+        "s",
+        "H256"
+      ]
+    ]
+  },
+  "AccountId": "EthereumAccountId",
+  "Address": "AccountId",
+  "Balance": "u128",
+  "LookupSource": "AccountId",
+  "Account": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "nonce",
+        "U256"
+      ],
+      [
+        "balance",
+        "u128"
+      ]
+    ]
+  },
+  "RoundIndex": "u32",
+  "Candidate": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "id",
+        "AccountId"
+      ],
+      [
+        "fee",
+        "Perbill"
+      ],
+      [
+        "bond",
+        "Balance"
+      ],
+      [
+        "nominators",
+        "Vec<Bond>"
+      ],
+      [
+        "total",
+        "Balance"
+      ],
+      [
+        "state",
+        "ValidatorStatus"
+      ]
+    ]
+  },
+  "Bond": {
+    "type": "struct",
+    "type_mapping": [
+      [
+        "owner",
+        "AccountId"
+      ],
+      [
+        "amount",
+        "Balance"
+      ]
+    ]
+  },
+  "ValidatorStatus": {
+    "type": "enum",
+    "type_mapping": [
+      [
+        "Active",
+        "NULL"
+      ],
+      [
+        "Idle",
+        "NULL"
+      ],
+      [
+        "Leaving",
+        "RoundIndex"
+      ]
+    ]
+  }
+}

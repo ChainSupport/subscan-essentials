@@ -1,4 +1,15 @@
 
 
-# Redis Configuration
-addr = "redis:6379"   # Redis host and port (default is 127.0.0.1:6379)
+# # Redis Configuration
+# addr = "redis:6379"   # Redis host and port (default is 127.0.0.1:6379)
+
+[config]
+	name = "subscan"
+	proto = "tcp"
+	addr = "redis:6379"
+	idle = 10
+	active = 10
+	dialTimeout = "1s"
+	readTimeout = "1s"
+	writeTimeout = "1s"
+	idleTimeout = "10s"

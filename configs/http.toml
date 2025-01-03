@@ -1,3 +1,6 @@
-# HTTP Configuration
-addr = "0.0.0.0:4399"      # Local HTTP server address and port (default is 0.0.0.0:4399)
+# # HTTP Configuration
+# addr = "0.0.0.0:4399"      # Local HTTP server address and port (default is 0.0.0.0:4399)
 
+[server]
+    addr = "0.0.0.0:4399"
+    timeout = "1s"
